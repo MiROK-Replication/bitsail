@@ -166,6 +166,8 @@ public class SimpleDivideSplitConstructor {
     } else {
       return Pair.newPair(null, resultSet.getLong(1));
     }
+    resultSet.close();
+    statement.close();
   }
 
   public List<ClickhouseSourceSplit> construct() throws IOException {
